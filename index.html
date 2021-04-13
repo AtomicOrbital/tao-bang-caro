@@ -23,17 +23,17 @@ Colume:<input id="colume" type="number">
 <body>
     <script>
         function buildChessboardCaro(row, colume) {
-            let sum = "<table>" 
+            let resume = "<table>" 
             for (let i = 0; i < row; i++) {
-                sum += "<tr>"; // thêm một hàng cho bảng
+                resume += "<tr>"; // thêm một hàng cho bảng
                 for (let j = 0; j < colume; j++) {
-                    sum += "<td>"; // thêm một ô 
-                    sum +="<button></button>" // tạo các nút cho bảng caro
-                    sum += "</td>";
+                    resume += "<td>"; // thêm một ô 
+                    resume +="<button></button>" // tạo các nút cho bảng caro
+                    resume += "</td>";
                 }
-                sum += "</tr>";
+                resume += "</tr>";
             }
-            return sum;
+            return resume;
         }
 
         function getRowAndColume() {
