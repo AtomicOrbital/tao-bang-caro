@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+Row:<input id="row" type="number">
+Colume:<input id="colume" type="number">
+<button id="start" type="button" onclick="getRowAndColume()">Start</button>
+<div id="table"></div>
+<style>
+    button{
+        width: 20px;
+        height: 20px;
+    }
+    #start{
+        width: 50px;
+    }
+</style>
+<body>
+    <script>
+        function buildChessboardCaro(row, colume) {
+            let sum = "<table>" 
+            for (let i = 0; i < row; i++) {
+                sum += "<tr>"; // thêm một hàng cho bảng
+                for (let j = 0; j < colume; j++) {
+                    sum += "<td>"; // thêm một ô 
+                    sum +="<button></button>" // tạo các nút cho bảng caro
+                    sum += "</td>";
+                }
+                sum += "</tr>";
+            }
+            sum +="</table>";
+            return sum;
+        }
+
+        function getRowAndColume() {
+                let rows = document.getElementById("row").value;
+                let columes = document.getElementById("colume").value;
+                document.getElementById("table").innerHTML = buildChessboardCaro(rows,columes);
+        }
+    </script>
+</body>
+
+</html>
