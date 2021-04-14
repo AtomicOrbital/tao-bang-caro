@@ -12,23 +12,25 @@ Colume:<input id="colume" type="number">
 <button id="start" type="button" onclick="getRowAndColume()">Start</button>
 <div id="table"></div>
 <style>
-    button{
+    button {
         width: 20px;
         height: 20px;
     }
-    #start{
+
+    #start {
         width: 50px;
     }
 </style>
-<body>
+
+<body  background="29262.jpg" >
     <script>
         function buildChessboardCaro(row, colume) {
-            let resume = "<table>" 
+            let resume = "<table>"
             for (let i = 0; i < row; i++) {
                 resume += "<tr>"; // thêm một hàng cho bảng
                 for (let j = 0; j < colume; j++) {
                     resume += "<td>"; // thêm một ô 
-                    resume +="<button></button>" // tạo các nút cho bảng caro
+                    resume += "<button></button>" // tạo các nút cho bảng caro
                     resume += "</td>";
                 }
                 resume += "</tr>";
@@ -37,9 +39,9 @@ Colume:<input id="colume" type="number">
         }
 
         function getRowAndColume() {
-                let rows = document.getElementById("row").value;
-                let columes = document.getElementById("colume").value;
-                document.getElementById("table").innerHTML = buildChessboardCaro(rows,columes);
+            let rows = document.getElementById("row").value;
+            let columes = document.getElementById("colume").value;
+            document.getElementById("table").innerHTML = buildChessboardCaro(rows, columes);
         }
     </script>
 </body>
