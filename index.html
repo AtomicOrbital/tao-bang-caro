@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-Row:<input id="row" type="number">
-Colume:<input id="colume" type="number">
+<span style="color: aqua;">Row:</span><input id="row" type="number">
+<span style="color: aqua;">Colume:</span><input id="colume" type="number">
 <button id="start" type="button" onclick="getRowAndColume()">Start</button>
 <div id="table"></div>
 <style>
@@ -20,9 +20,10 @@ Colume:<input id="colume" type="number">
     #start {
         width: 50px;
     }
+    
 </style>
 
-<body  background="29262.jpg" >
+<body background="29262.jpg">
     <script>
         function buildChessboardCaro(row, colume) {
             let resume = "<table>"
